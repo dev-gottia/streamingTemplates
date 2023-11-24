@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WQ-Streams : {{ $page->page_title }}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      .ratio iframe {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    {!! htmlspecialchars_decode($ads->head_tag_ads_code) !!}
+  </head>
+  <body>
+    <div class="container pb-5">
+      <div class="brand border-bottom text-center pt-3 pb-2">
+        <a href="#" class="text-decoration-none text-white">
+          <h4>WQ-Streams</h4>
+        </a>
+      </div>
+    </div>
+
+    <div class="container-fluid py-5">
+      <div class="row">
+        <div
+          class="col-xl-4 col-lg-4 d-flex flex-lg-column flex-column-reverse align-items-lg-end gap-3 pb-3"
+        >
+          {!! htmlspecialchars_decode($ads->left_player_ads_code) !!}
+        </div>
+        <div class="col-xl-5 col-lg-6 d-flex flex-column gap-3 pb-3">
+          <div class="d-flex justify-content-start">
+            {!! htmlspecialchars_decode($ads->top_player_ads_code) !!}
+          </div>
+
+          <div class="bklinks d-flex">
+            {!! $page->game->site_links !!}
+          </div>
+
+          <div class="ratio ratio-16x9">
+            <iframe
+              frameborder="0"
+              width="640"
+              height="480"
+              src="//sportea.online/live/embed.php?ch=es37"
+              allowfullscreen
+              scrolling="no"
+              allowtransparency
+            ></iframe>
+          </div>
+          {!! htmlspecialchars_decode($ads->bottom_player_ads_code) !!}
+        </div>
+        <div class="col-xl-2 col-lg-2">
+          {!! htmlspecialchars_decode($ads->footer_ads_code) !!}
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
