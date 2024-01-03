@@ -10,9 +10,92 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
+    <style>
+      .nav-link:hover {
+        background: #212529;
+      }
+    </style>
     {!! htmlspecialchars_decode($ads->head_tag_ads_code) !!}
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning" href="#">rSoccerLink</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-flex justify-content-center gap-5 w-100">
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://soccerstreamlinks.com/"
+                target="_blank"
+                >Soccer Streams</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://nbastreamlinks.net/"
+                target="_blank"
+                >NBA Streams</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://nhlstreamlinks.com/"
+                target="_blank"
+                >NHL Streams</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://nflstreamlinks.com/"
+                target="_blank"
+                >NFL Streams</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://mmastreamlinks.com/"
+                target="_blank"
+                >MMA Streams</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://boxingstreamlinks.com/"
+                target="_blank"
+                >Boxing Streams</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center"
+                href="https://mlbstreamlinks.com/"
+                target="_blank"
+                >MLB Streams</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container-fluid">
       <div class="row my-4">
         <div class="col-xl-4 col-lg-4">
@@ -27,52 +110,7 @@
         <div class="col-xl-8 col-lg-8">
           <div class="card bg-body-tertiary border-0 rounded-0">
             <div class="card-body">
-              <div class="w-100 d-flex justify-content-center gap-3 mb-2">
-                <a href="https://soccerstreamlinks.com/" target="_blank">
-                  <img
-                    src="https://v6.soccerstreamlinks.com/images/types/soccer.png"
-                    width="40px"
-                    height="40px"
-                  />
-                </a>
-                <a href="https://nbastreamlinks.net/" target="_blank">
-                  <img
-                    src="https://v6.soccerstreamlinks.com/images/types/nba.png"
-                    width="40px"
-                    height="40px"
-                  />
-                </a>
-                <a href="https://nflstreamlinks.com/" target="_blank">
-                  <img
-                    src="https://v6.soccerstreamlinks.com/images/types/nfl.png"
-                    width="40px"
-                    height="40px"
-                  />
-                </a>
-
-                <a href="https://nhlstreamlinks.com/" target="_blank">
-                  <img
-                    src="https://v6.soccerstreamlinks.com/images/types/nhl.png"
-                    width="40px"
-                    height="40px"
-                  />
-                </a>
-
-                <a href="https://mmastreamlinks.com/" target="_blank">
-                  <img
-                    src="https://v6.soccerstreamlinks.com/images/types/mma.png"
-                    width="40px"
-                    height="40px"
-                  />
-                </a>
-                <a href="https://boxingstreamlinks.com/" target="_blank">
-                  <img
-                    src="https://v6.soccerstreamlinks.com/images/types/boxing.png"
-                    width="40px"
-                    height="40px"
-                  />
-                </a>
-              </div>
+              <h3>{{ $page->page_title }}</h3>
 
               <div class="ratio ratio-16x9">{!! $page->page_data !!}</div>
 
